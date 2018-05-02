@@ -1,8 +1,8 @@
-package magic;
+package codes;
 
 import java.util.Scanner;
 
-public class Code_even {
+public class MagicSquare_even {
 
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub

@@ -1,8 +1,8 @@
-package magic;
+package codes;
 
 import java.util.Scanner;
 
-public class Code {
+public class MagicSquare {
 
 	public static void main(String[] args) {
 

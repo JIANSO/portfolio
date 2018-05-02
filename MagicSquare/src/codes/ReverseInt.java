@@ -1,4 +1,4 @@
-package magic;
+package codes;
 
 import java.util.InputMismatchException;
 import java.util.Scanner;

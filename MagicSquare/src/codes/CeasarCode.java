@@ -1,4 +1,4 @@
-package magic;
+package codes;
 
 import java.util.Scanner;
 
