@@ -47,53 +47,67 @@ public class DdangGame {
 			System.out.print("\n\n");
 		}
 
+		int start;
+		int total;
+		System.out.println(">> 1을 눌러 땅따먹기 게임 시작");
+		start = scanner.nextInt();
+		if (start == 1){
+			total = hopscotch(row, data);
+			System.out.println(">> 영희가 얻은 점수는 총 " + total + "입니다.");
 
-		System.out.println(">> 땅따먹기 게임 시작");
+		}else{
+			System.out.println(">> 프로그램을 종료합니다");
+		}
+
+	}//end main()
+
+	public static int hopscotch(int row, int[][]data){
 		int best;
 		int spot = -1;
+		int spot2 = -1;
+		int total = 0;
 
 		for(int i =0; i < row; i++) {
 			best = 0;
+			spot = spot2;
+			spot2 = -1;
+
 			for(int J = 0; J < 3; J++) {
 				// 1) 가장 큰 수
 				// 2) 다음 번엔 같은 열을 밟을 수 없음
 
 				if(data[i][J] < data[i][J+1]) {
 					if(spot == J+1) {
-						best = data[i][J];
-						spot = J;
+						if(data[i][J] > best){
+							best = data[i][J];
+							spot2 = J;
+						}
 						continue;
-
 					}else if(data[i][J+1] > best){
 						best = data[i][J+1];
-						spot = J+1; //밟으면 안되는 열 값 저장
-
+						spot2 = J+1; //밟으면 안되는 열 값 저장
 					}
 
 				}else if(data[i][J] >= data[i][J+1]) {
 					if(spot == J) {
+						if(data[i][J+1] > best){
+							best = data[i][J+1];
+							spot2 = J+1;
+						}
 						continue;
-
 					}else if(data[i][J] > best){
 						best = data[i][J];
-						spot = J; //밟으면 안되는 열 값 저장
-
+						spot2 = J; //밟으면 안되는 열 값 저장
 					}
 				}
 
-			}//end for(J)
 
-			System.out.println("밟으면 안되는 열: " + spot + ", 가장 큰 수 : " + best);
+			}//end for(J)
+			total += best;
+			System.out.println(" >> 최고값 : " +  best + ", 이번에에 밟으면 안되는 열 : " + spot + ", 앞으로  밟으면 안되는 열 : " + spot2 + ", 점수 총합 : " + total);
 		}//end for(i)
 
-
-
-
-
-
-
-
-
-	}//end main()
+		return total;
+	}
 
 }
