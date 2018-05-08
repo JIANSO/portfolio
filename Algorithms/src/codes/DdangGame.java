@@ -4,6 +4,12 @@ import java.util.Scanner;
 
 public class DdangGame {
 
+	
+	/*
+	2018-05-08 
+	문제 파악을 못하고 잘못 만든 알고리즘 -> 열마다 최대값을 구해버림
+	*/
+	
 	/*땅따먹기 게임
 	2018-05-01
 
