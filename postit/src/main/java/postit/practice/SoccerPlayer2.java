@@ -8,6 +8,11 @@ import java.util.Comparator;
  *
  * 2019.05.22
  * Comparable 학습
+ * 
+ * https://cwondev.tistory.com/15
+ * https://cwondev.tistory.com/15
+ * https://cwondev.tistory.com/15
+ * 
  */
 public class SoccerPlayer2 {
 
